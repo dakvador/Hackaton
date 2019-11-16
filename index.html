@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.1/jspdf.debug.js"
+        integrity="sha384-X4GDYnzplvo6FyFvNVyh5H6VQKJ1yYkkzUDmxppFT/GAYvnhB6y+zoHdCQweNJ1T"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <span id="header1"> "Boutique" </span> <span id="header2">Tel Aviv Cloths</span>
+        <div id="logo_panier">
+            <img id="logo_panier_img" src="logo.png" alt="">
+
+            <span id="logo_panier_nb">0</span>
+
+        </div>
+    </div>
+
+    <div id="left">
+        <div id='indicators'>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input check_cat " id="pantalons" value="Supp" checked
+                    onclick="selectProduit()">
+                <label class="form-check-label" for="Evol">Pantalons</label><br />
+                <input type="checkbox" class="form-check-input check_cat" id="slips" value="Supp" checked
+                    onclick="selectProduit()">
+                <label class="form-check-label" for="Evol">Slips</label><br />
+                <input type="checkbox" class="form-check-input check_cat" id="chemises" value="Supp" checked
+                    onclick="selectProduit()">
+                <label class="form-check-label" for="Evol">Chemises</label><br />
+                <input type="checkbox" class="form-check-input check_cat" id="pulls" value="Supp" checked
+                    onclick="selectProduit()">
+                <label class="form-check-label" for="Evol">Pulls</label><br />
+                <input type="checkbox" class="form-check-input check_cat" id="chaussures" value="Supp" checked
+                    onclick="selectProduit()">
+                <label class="form-check-label" for="Evol">Chaussures</label><br />
+            </div>
+
+            <span>0</span><span style="margin-left: 170px">500 $</span>
+            <input id="price_range" type="range" name="price" min="0" max="500" value="500" onchange="selectProduit()">
+<span id="dis_price_sel"></span>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div id="main"></div>
+
+    <div id="right">
+        <h1>Panier </h1>
+        <table class="table"></table>
+        <div id="total"></div>
+        <div id="pdf_facture"> Facture </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
